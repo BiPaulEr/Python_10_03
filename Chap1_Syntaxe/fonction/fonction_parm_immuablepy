@@ -1,0 +1,11 @@
+x = 8
+y = -8
+
+def multiply(a, b):
+    a = a * 50
+    b = b * 100
+
+multiply(x, y)
+
+print(x, y)
+

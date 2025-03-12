@@ -1,0 +1,13 @@
+x = 8
+y = -8
+result = None
+def multiply(a, b):
+    a = a * 50
+    b = b * 100
+    return a, b
+
+
+x, y = multiply(x, y)
+
+print(x, y)
+
