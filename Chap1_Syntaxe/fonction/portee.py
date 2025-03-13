@@ -1,4 +1,4 @@
-def Ashaha(liste):
+def ahaha(liste):
     return 4758775496456456456546645
 
 len = ahaha
