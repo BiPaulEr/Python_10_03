@@ -9,7 +9,7 @@ class Personne():
 
 persone1 = Personne("Prenom1", "Nom1")
 print(persone1.nom_nom)
-
+persone1.nom_nom = '"luguurt'
 persone1.saluer()
 
 personne2 = Personne("Oui", "Oui")
