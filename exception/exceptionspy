@@ -1,0 +1,80 @@
+import random
+
+class CustomException(Exception):
+    def __init__(self, nom, ligne):
+        self.nom = nom
+        self.ligne = ligne    
+    def print(self):
+        print(f"Je suis ton pere et le nom rest {self.nom} et ligne : {self.ligne}")
+
+def profondeur_4():
+    raise CustomException("Erreur de typo", 3)
+
+a = int()
+def profondeur_3():
+    try:
+        profondeur_4()
+    except Exception as e:
+        e.print()
+        raise e
+
+def profondeur_2():
+    try:
+        profondeur_3()
+    except Exception as e:
+        print(f"{e}")
+
+def profondeur_1():
+    try:
+        profondeur_2()
+    except Exception as e:
+        print(f"{e}")
+        raise e
+try: 
+    profondeur_1()
+except Exception as e:
+    print(f"{e}")
+    raise e
+
+def F1(liste):
+    liste.append(3)
+    if random.randint(1, 10) < 5:
+        return None
+    return liste
+
+def F2(liste):
+    liste.append(3)
+    if random.randint(1, 10) < 5:
+        return None
+    return liste
+
+def F3(liste):
+    liste.append(3)
+    if random.randint(1, 10) < 5:
+        return None
+    return liste
+
+def F4(liste):
+    liste.append(3)
+    if random.randint(1, 10) < 5:
+        return None
+    return liste
+
+liste = []
+try:
+    liste = F1(liste)
+    liste = F2(liste)
+    liste = F3(liste)
+    liste = F4(liste)
+except AttributeError as e:
+    print(f"{e}")
+
+"""
+liste = F1(liste)
+if liste is not None:   
+    liste = F2(liste)
+    if liste is not None:  
+        liste = F3(liste)
+        if liste is not None:  
+            liste = F4(liste)
+"""
